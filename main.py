@@ -5,13 +5,13 @@
 """
 import datetime, json, os, sys, time
 import requests
-from config import HANDLE, level_for_day
+from config import HANDLE
 import render, instagram
 
 STATE = "state.json"
 
 def load_state():
-    return json.load(open(STATE)) if os.path.exists(STATE) else {"day": 0, "used": []}
+    return json.load(open(STATE)) if os.path.exists(STATE) else {"day": 0}
 
 def save_state(s):
     json.dump(s, open(STATE, "w"), ensure_ascii=False, indent=2)
@@ -22,27 +22,20 @@ def raw_url(rel_path):
     return f"https://raw.githubusercontent.com/{repo}/{branch}/{rel_path}"
 
 def prepare(demo=False):
-    from generator import generate_word, build_caption
+    from generator import word_for_day, build_caption
     state = load_state()
-    day = state["day"] + 1
-    level = level_for_day(day - 1)
-    if demo:
-        w = {"arabic": "شُكْرًا", "transliteration": "shukran", "english": "Thank you",
-             "urdu": "شکریہ", "hook": "Can you guess this super common Arabic word? 🤔",
-             "hashtags": ["arabicwords", "arabicvocabulary", "learnurdu", "arabiclanguage", "wordoftheday"]}
-    else:
-        w = generate_word(level, state["used"])
+    day = 1 if demo else state["day"] + 1
+    w = word_for_day(day)
+    level = w["level"]
     date = datetime.date.today().isoformat()
     out = os.path.join("posts", date)
     render.render_post(w, level, day, HANDLE, out)
     post = {"date": date, "day": day, "level": level, "word": w,
-            "caption": build_caption(w, level, HANDLE),
+            "caption": build_caption(w, day, HANDLE),
             "images": [f"{out}/slide_{i}.jpg" for i in (1, 2, 3)], "posted": False}
     json.dump(post, open(os.path.join(out, "post.json"), "w"), ensure_ascii=False, indent=2)
     if not demo:
-        state["day"] = day
-        state["used"].append(w["arabic"])
-        save_state(state)
+        save_state({"day": day})
     print(f"Prepared day {day} [{level}]: {w['arabic']} = {w['english']} / {w['urdu']}")
 
 def latest_pending():

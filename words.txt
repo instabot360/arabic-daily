@@ -1,0 +1,513 @@
+# Format: Level|Arabic|Transliteration|English|Urdu
+# Levels: Beginner, Elementary, Intermediate, Advanced, Expert
+# The bot posts one line per day, top to bottom. Add new lines at the BOTTOM.
+Beginner|مَاءٌ|maa'|Water|پانی
+Beginner|كِتَابٌ|kitaab|Book|کتاب
+Beginner|بَيْتٌ|bayt|House|گھر
+Beginner|شُكْرًا|shukran|Thank you|شکریہ
+Beginner|سَلَامٌ|salaam|Peace / Hello|سلام / امن
+Beginner|أُمٌّ|umm|Mother|ماں
+Beginner|أَبٌ|ab|Father|باپ
+Beginner|أَخٌ|akh|Brother|بھائی
+Beginner|أُخْتٌ|ukht|Sister|بہن
+Beginner|وَلَدٌ|walad|Boy|لڑکا
+Beginner|بِنْتٌ|bint|Girl|لڑکی
+Beginner|رَجُلٌ|rajul|Man|آدمی
+Beginner|امْرَأَةٌ|imra'a|Woman|عورت
+Beginner|طَعَامٌ|ta'aam|Food|کھانا
+Beginner|خُبْزٌ|khubz|Bread|روٹی
+Beginner|حَلِيبٌ|haleeb|Milk|دودھ
+Beginner|تُفَّاحٌ|tuffaah|Apple|سیب
+Beginner|مَوْزٌ|mawz|Banana|کیلا
+Beginner|شَمْسٌ|shams|Sun|سورج
+Beginner|قَمَرٌ|qamar|Moon|چاند
+Beginner|نَجْمٌ|najm|Star|ستارہ
+Beginner|سَمَاءٌ|samaa'|Sky|آسمان
+Beginner|أَرْضٌ|ard|Earth / Land|زمین
+Beginner|بَحْرٌ|bahr|Sea|سمندر
+Beginner|نَهْرٌ|nahr|River|دریا
+Beginner|جَبَلٌ|jabal|Mountain|پہاڑ
+Beginner|شَجَرَةٌ|shajara|Tree|درخت
+Beginner|زَهْرَةٌ|zahra|Flower|پھول
+Beginner|كَلْبٌ|kalb|Dog|کتا
+Beginner|قِطَّةٌ|qitta|Cat|بلی
+Beginner|حِصَانٌ|hisaan|Horse|گھوڑا
+Beginner|طَائِرٌ|taa'ir|Bird|پرندہ
+Beginner|سَمَكَةٌ|samaka|Fish|مچھلی
+Beginner|أَحْمَرُ|ahmar|Red|سرخ / لال
+Beginner|أَزْرَقُ|azraq|Blue|نیلا
+Beginner|أَخْضَرُ|akhdar|Green|سبز
+Beginner|أَصْفَرُ|asfar|Yellow|پیلا
+Beginner|أَسْوَدُ|aswad|Black|کالا
+Beginner|أَبْيَضُ|abyad|White|سفید
+Beginner|كَبِيرٌ|kabeer|Big|بڑا
+Beginner|صَغِيرٌ|sagheer|Small|چھوٹا
+Beginner|جَمِيلٌ|jameel|Beautiful|خوبصورت
+Beginner|جَدِيدٌ|jadeed|New|نیا
+Beginner|قَدِيمٌ|qadeem|Old (thing)|پرانا
+Beginner|طَوِيلٌ|taweel|Tall / Long|لمبا
+Beginner|قَصِيرٌ|qaseer|Short|کوتاہ
+Beginner|سَرِيعٌ|saree'|Fast|تیز
+Beginner|بَطِيءٌ|bati'|Slow|سست / آہستہ
+Beginner|حَارٌّ|haarr|Hot|گرم
+Beginner|بَارِدٌ|baarid|Cold|ٹھنڈا
+Beginner|وَاحِدٌ|waahid|One|ایک
+Beginner|اثْنَانِ|ithnaan|Two|دو
+Beginner|ثَلَاثَةٌ|thalaatha|Three|تین
+Beginner|أَرْبَعَةٌ|arba'a|Four|چار
+Beginner|خَمْسَةٌ|khamsa|Five|پانچ
+Beginner|عَشَرَةٌ|ashara|Ten|دس
+Beginner|يَوْمٌ|yawm|Day|دن
+Beginner|لَيْلٌ|layl|Night|رات
+Beginner|صَبَاحٌ|sabaah|Morning|صبح
+Beginner|مَسَاءٌ|masaa'|Evening|شام
+Beginner|أَكَلَ|akala|To eat|کھانا
+Beginner|شَرِبَ|shariba|To drink|پینا
+Beginner|ذَهَبَ|dhahaba|To go|جانا
+Beginner|جَاءَ|jaa'a|To come|آنا
+Beginner|كَتَبَ|kataba|To write|لکھنا
+Beginner|قَرَأَ|qara'a|To read|پڑھنا
+Beginner|نَامَ|naama|To sleep|سونا
+Beginner|جَلَسَ|jalasa|To sit|بیٹھنا
+Beginner|وَقَفَ|waqafa|To stand / stop|کھڑا ہونا / رکنا
+Beginner|فَتَحَ|fataha|To open|کھولنا
+Beginner|أَغْلَقَ|aghlaqa|To close|بند کرنا
+Beginner|أَحَبَّ|ahabba|To love|محبت کرنا
+Beginner|رَأَى|ra'aa|To see|دیکھنا
+Beginner|سَمِعَ|sami'a|To hear|سننا
+Beginner|قَالَ|qaala|To say|کہنا
+Beginner|بَابٌ|baab|Door|دروازہ
+Beginner|نَافِذَةٌ|naafidha|Window|کھڑکی
+Beginner|طَاوِلَةٌ|taawila|Table|میز
+Beginner|كُرْسِيٌّ|kursiyy|Chair|کرسی
+Beginner|قَلَمٌ|qalam|Pen|قلم
+Beginner|مَدْرَسَةٌ|madrasa|School|اسکول / مدرسہ
+Beginner|مُعَلِّمٌ|mu'allim|Teacher|استاد
+Beginner|طَالِبٌ|taalib|Student|طالب علم
+Beginner|سَيَّارَةٌ|sayyaara|Car|گاڑی
+Beginner|طَرِيقٌ|tareeq|Road / Way|راستہ / سڑک
+Beginner|سُوقٌ|sooq|Market|بازار
+Beginner|مَسْجِدٌ|masjid|Mosque|مسجد
+Beginner|يَدٌ|yad|Hand|ہاتھ
+Beginner|عَيْنٌ|ayn|Eye|آنکھ
+Beginner|رَأْسٌ|ra's|Head|سر
+Beginner|قَلْبٌ|qalb|Heart|دل
+Beginner|فَمٌ|fam|Mouth|منہ
+Beginner|أُذُنٌ|udhun|Ear|کان
+Beginner|رِجْلٌ|rijl|Leg / Foot|ٹانگ / پاؤں
+Beginner|نَعَمْ|na'am|Yes|ہاں
+Beginner|لَا|laa|No|نہیں
+Beginner|مَرْحَبًا|marhaban|Welcome / Hello|خوش آمدید / ہیلو
+Beginner|صَدِيقٌ|sadeeq|Friend|دوست
+Beginner|مَالٌ|maal|Money / Wealth|پیسہ / دولت
+Beginner|وَقْتٌ|waqt|Time|وقت
+Elementary|سَعِيدٌ|sa'eed|Happy|خوش
+Elementary|حَزِينٌ|hazeen|Sad|اداس
+Elementary|غَضْبَانُ|ghadbaan|Angry|غصے میں
+Elementary|تَعْبَانُ|ta'baan|Tired|تھکا ہوا
+Elementary|جَائِعٌ|jaa'i'|Hungry|بھوکا
+Elementary|عَطْشَانُ|atshaan|Thirsty|پیاسا
+Elementary|خَائِفٌ|khaa'if|Afraid|خوفزدہ
+Elementary|مَرِيضٌ|mareed|Sick|بیمار
+Elementary|طَبِيبٌ|tabeeb|Doctor|ڈاکٹر / طبیب
+Elementary|مُسْتَشْفًى|mustashfaa|Hospital|ہسپتال
+Elementary|دَوَاءٌ|dawaa'|Medicine|دوا
+Elementary|عَمَلٌ|amal|Work|کام
+Elementary|مُوَظَّفٌ|muwadhdhaf|Employee|ملازم
+Elementary|شَرِكَةٌ|sharika|Company|کمپنی
+Elementary|مَكْتَبٌ|maktab|Office / Desk|دفتر
+Elementary|سَفَرٌ|safar|Travel|سفر
+Elementary|مَطَارٌ|matar|Airport|ہوائی اڈہ
+Elementary|طَائِرَةٌ|taa'ira|Airplane|ہوائی جہاز
+Elementary|قِطَارٌ|qitaar|Train|ریل گاڑی
+Elementary|فُنْدُقٌ|funduq|Hotel|ہوٹل
+Elementary|مَطْعَمٌ|mat'am|Restaurant|ریسٹورنٹ
+Elementary|تَذْكِرَةٌ|tadhkira|Ticket|ٹکٹ
+Elementary|حَقِيبَةٌ|haqeeba|Bag|تھیلا / بیگ
+Elementary|خَرِيطَةٌ|khareeta|Map|نقشہ
+Elementary|مَدِينَةٌ|madeena|City|شہر
+Elementary|قَرْيَةٌ|qarya|Village|گاؤں
+Elementary|بَلَدٌ|balad|Country / Town|ملک / شہر
+Elementary|شَارِعٌ|shaari'|Street|گلی / سڑک
+Elementary|جِسْرٌ|jisr|Bridge|پل
+Elementary|حَدِيقَةٌ|hadeeqa|Garden / Park|باغ
+Elementary|مَطْبَخٌ|matbakh|Kitchen|باورچی خانہ
+Elementary|غُرْفَةٌ|ghurfa|Room|کمرہ
+Elementary|سَرِيرٌ|sareer|Bed|بستر / چارپائی
+Elementary|مِفْتَاحٌ|miftaah|Key|چابی
+Elementary|سَاعَةٌ|saa'a|Hour / Watch|گھنٹہ / گھڑی
+Elementary|دَقِيقَةٌ|daqeeqa|Minute|منٹ
+Elementary|أُسْبُوعٌ|usbu'|Week|ہفتہ
+Elementary|شَهْرٌ|shahr|Month|مہینہ
+Elementary|سَنَةٌ|sana|Year|سال
+Elementary|غَدًا|ghadan|Tomorrow|آنے والا کل
+Elementary|أَمْسِ|amsi|Yesterday|گزرا ہوا کل
+Elementary|الْآنَ|al-aan|Now|اب
+Elementary|دَائِمًا|daa'iman|Always|ہمیشہ
+Elementary|أَحْيَانًا|ahyaanan|Sometimes|کبھی کبھی
+Elementary|قَرِيبٌ|qareeb|Near|قریب
+Elementary|بَعِيدٌ|ba'eed|Far|دور
+Elementary|سَهْلٌ|sahl|Easy|آسان
+Elementary|صَعْبٌ|sa'b|Difficult|مشکل
+Elementary|غَنِيٌّ|ghaniyy|Rich|امیر
+Elementary|فَقِيرٌ|faqeer|Poor|غریب
+Elementary|نَظِيفٌ|nadheef|Clean|صاف
+Elementary|وَسِخٌ|wasikh|Dirty|گندا
+Elementary|مَفْتُوحٌ|maftooh|Open|کھلا ہوا
+Elementary|مُغْلَقٌ|mughlaq|Closed|بند
+Elementary|رَخِيصٌ|rakhees|Cheap|سستا
+Elementary|غَالٍ|ghaalin|Expensive|مہنگا
+Elementary|اِشْتَرَى|ishtaraa|To buy|خریدنا
+Elementary|بَاعَ|baa'a|To sell|بیچنا
+Elementary|دَفَعَ|dafa'a|To pay / push|ادا کرنا / دھکیلنا
+Elementary|سَاعَدَ|saa'ada|To help|مدد کرنا
+Elementary|فَهِمَ|fahima|To understand|سمجھنا
+Elementary|عَلِمَ|alima|To know|جاننا
+Elementary|تَعَلَّمَ|ta'allama|To learn|سیکھنا
+Elementary|عَلَّمَ|allama|To teach|سکھانا
+Elementary|سَأَلَ|sa'ala|To ask|پوچھنا
+Elementary|أَجَابَ|ajaaba|To answer|جواب دینا
+Elementary|لَعِبَ|la'iba|To play|کھیلنا
+Elementary|عَمِلَ|amila|To work / do|کام کرنا
+Elementary|سَكَنَ|sakana|To live / reside|رہنا
+Elementary|رَجَعَ|raja'a|To return|لوٹنا / واپس آنا
+Elementary|دَخَلَ|dakhala|To enter|داخل ہونا
+Elementary|خَرَجَ|kharaja|To go out|باہر نکلنا
+Elementary|أَخَذَ|akhadha|To take|لینا
+Elementary|أَعْطَى|a'taa|To give|دینا
+Elementary|وَجَدَ|wajada|To find|پانا / ڈھونڈ لینا
+Elementary|بَحَثَ|bahatha|To search|تلاش کرنا
+Elementary|انْتَظَرَ|intadhara|To wait|انتظار کرنا
+Elementary|مَشَى|mashaa|To walk|چلنا
+Elementary|رَكَضَ|rakada|To run|دوڑنا
+Elementary|سَبَحَ|sabaha|To swim|تیرنا
+Elementary|طَبَخَ|tabakha|To cook|پکانا
+Elementary|غَسَلَ|ghasala|To wash|دھونا
+Elementary|لَبِسَ|labisa|To wear|پہننا
+Elementary|ثَوْبٌ|thawb|Garment / Robe|لباس / جبہ
+Elementary|حِذَاءٌ|hidhaa'|Shoe|جوتا
+Elementary|قَمِيصٌ|qameess|Shirt|قمیض
+Elementary|هَاتِفٌ|haatif|Phone|فون
+Elementary|حَاسُوبٌ|haasoob|Computer|کمپیوٹر
+Elementary|صُورَةٌ|soora|Picture|تصویر
+Elementary|رِسَالَةٌ|risaala|Message / Letter|پیغام / خط
+Elementary|جَرِيدَةٌ|jareeda|Newspaper|اخبار
+Elementary|لُغَةٌ|lugha|Language|زبان
+Elementary|كَلِمَةٌ|kalima|Word|لفظ / کلمہ
+Elementary|سُؤَالٌ|su'aal|Question|سوال
+Elementary|جَوَابٌ|jawaab|Answer|جواب
+Elementary|فِكْرَةٌ|fikra|Idea|خیال
+Elementary|حُلْمٌ|hulm|Dream|خواب
+Elementary|أَمَلٌ|amal|Hope|امید
+Elementary|حُبٌّ|hubb|Love|محبت
+Elementary|صَبْرٌ|sabr|Patience|صبر
+Intermediate|عِلْمٌ|ilm|Knowledge|علم
+Intermediate|مَعْرِفَةٌ|ma'rifa|Awareness / Acquaintance|واقفیت / معرفت
+Intermediate|ثَقَافَةٌ|thaqaafa|Culture|ثقافت
+Intermediate|حَضَارَةٌ|hadaara|Civilization|تہذیب / تمدن
+Intermediate|تَارِيخٌ|taareekh|History|تاریخ
+Intermediate|جَامِعَةٌ|jaami'a|University|یونیورسٹی
+Intermediate|مَكْتَبَةٌ|maktaba|Library|کتب خانہ / لائبریری
+Intermediate|امْتِحَانٌ|imtihaan|Exam|امتحان
+Intermediate|نَجَاحٌ|najaah|Success|کامیابی
+Intermediate|فَشَلٌ|fashal|Failure|ناکامی
+Intermediate|حُكُومَةٌ|hukooma|Government|حکومت
+Intermediate|شَعْبٌ|sha'b|People / Nation|قوم / عوام
+Intermediate|وَطَنٌ|watan|Homeland|وطن
+Intermediate|حُرِّيَّةٌ|hurriyya|Freedom|آزادی
+Intermediate|عَدْلٌ|adl|Justice|انصاف / عدل
+Intermediate|ظُلْمٌ|dhulm|Injustice / Oppression|ظلم
+Intermediate|حَقٌّ|haqq|Right / Truth|حق / سچ
+Intermediate|بَاطِلٌ|baatil|Falsehood|باطل / جھوٹ
+Intermediate|سَلَامَةٌ|salaama|Safety|سلامتی
+Intermediate|أَمْنٌ|amn|Security|امن / تحفظ
+Intermediate|حَرْبٌ|harb|War|جنگ
+Intermediate|سِلْمٌ|silm|Peace|صلح
+Intermediate|اِقْتِصَادٌ|iqtisaad|Economy|معیشت
+Intermediate|تِجَارَةٌ|tijaara|Trade|تجارت
+Intermediate|صِنَاعَةٌ|sinaa'a|Industry|صنعت
+Intermediate|زِرَاعَةٌ|ziraa'a|Agriculture|زراعت / کھیتی باڑی
+Intermediate|فَلَّاحٌ|fallaah|Farmer|کسان
+Intermediate|مَصْنَعٌ|masna'|Factory|کارخانہ
+Intermediate|سِعْرٌ|si'r|Price|قیمت
+Intermediate|رَاتِبٌ|raatib|Salary|تنخواہ
+Intermediate|دَيْنٌ|dayn|Debt|قرض
+Intermediate|رِبْحٌ|ribh|Profit|منافع
+Intermediate|خَسَارَةٌ|khasaara|Loss|نقصان
+Intermediate|صِحَّةٌ|sihha|Health|صحت
+Intermediate|مَرَضٌ|maradh|Disease|بیماری
+Intermediate|عِلَاجٌ|ilaaj|Treatment|علاج
+Intermediate|رِيَاضَةٌ|riyaada|Sport|ورزش / کھیل
+Intermediate|فَنٌّ|fann|Art|فن
+Intermediate|شِعْرٌ|shi'r|Poetry|شاعری
+Intermediate|أَدَبٌ|adab|Literature / Manners|ادب
+Intermediate|قِصَّةٌ|qissa|Story|کہانی
+Intermediate|رِوَايَةٌ|riwaaya|Novel / Narration|ناول / روایت
+Intermediate|مَقَالَةٌ|maqaala|Article|مضمون
+Intermediate|خَبَرٌ|khabar|News|خبر
+Intermediate|إِعْلَامٌ|i'laam|Media|ذرائع ابلاغ / میڈیا
+Intermediate|رَأْيٌ|ra'y|Opinion|رائے
+Intermediate|حِوَارٌ|hiwaar|Dialogue|مکالمہ / گفتگو
+Intermediate|مُشْكِلَةٌ|mushkila|Problem|مسئلہ
+Intermediate|حَلٌّ|hall|Solution|حل
+Intermediate|سَبَبٌ|sabab|Reason / Cause|سبب / وجہ
+Intermediate|نَتِيجَةٌ|nateeja|Result|نتیجہ
+Intermediate|هَدَفٌ|hadaf|Goal|مقصد / ہدف
+Intermediate|خُطَّةٌ|khutta|Plan|منصوبہ
+Intermediate|تَجْرِبَةٌ|tajriba|Experience / Experiment|تجربہ
+Intermediate|فُرْصَةٌ|fursa|Opportunity|موقع
+Intermediate|خَطَرٌ|khatar|Danger|خطرہ
+Intermediate|مُسْتَقْبَلٌ|mustaqbal|Future|مستقبل
+Intermediate|مَاضٍ|maadin|Past|ماضی
+Intermediate|حَاضِرٌ|haadir|Present / Present-day|حال / موجود
+Intermediate|ذَاكِرَةٌ|dhaakira|Memory|یادداشت
+Intermediate|ذِكْرَى|dhikraa|Remembrance|یاد
+Intermediate|عَقْلٌ|aql|Mind / Intellect|عقل / دماغ
+Intermediate|رُوحٌ|rooh|Spirit / Soul|روح
+Intermediate|نَفْسٌ|nafs|Self / Soul|نفس / ذات
+Intermediate|ضَمِيرٌ|dameer|Conscience|ضمیر
+Intermediate|إِيمَانٌ|eemaan|Faith|ایمان
+Intermediate|دِينٌ|deen|Religion|دین / مذہب
+Intermediate|صَلَاةٌ|salaah|Prayer|نماز
+Intermediate|صِيَامٌ|siyaam|Fasting|روزہ
+Intermediate|زَكَاةٌ|zakaah|Obligatory charity (Zakat)|زکوٰۃ
+Intermediate|حَجٌّ|hajj|Pilgrimage|حج
+Intermediate|دُعَاءٌ|du'aa'|Supplication|دعا
+Intermediate|تَوْبَةٌ|tawba|Repentance|توبہ
+Intermediate|رَحْمَةٌ|rahma|Mercy|رحمت
+Intermediate|مَغْفِرَةٌ|maghfira|Forgiveness|مغفرت / بخشش
+Intermediate|بَرَكَةٌ|baraka|Blessing|برکت
+Intermediate|نِعْمَةٌ|ni'ma|Favor / Bounty|نعمت
+Intermediate|شُكْرٌ|shukr|Gratitude|شکر
+Intermediate|كَرَمٌ|karam|Generosity|سخاوت / کرم
+Intermediate|صِدْقٌ|sidq|Honesty|سچائی
+Intermediate|كَذِبٌ|kadhib|Lie|جھوٹ
+Intermediate|أَمَانَةٌ|amaana|Trust|امانت
+Intermediate|وَفَاءٌ|wafaa'|Loyalty|وفاداری
+Intermediate|شَجَاعَةٌ|shajaa'a|Courage|بہادری
+Intermediate|خَوْفٌ|khawf|Fear|ڈر / خوف
+Intermediate|فَرَحٌ|farah|Joy|خوشی
+Intermediate|حُزْنٌ|huzn|Sorrow|غم
+Intermediate|غَضَبٌ|ghadab|Anger|غصہ
+Intermediate|شَوْقٌ|shawq|Longing|شوق / اشتیاق
+Intermediate|غَيْرَةٌ|ghayra|Jealousy / Protective zeal|رشک / غیرت
+Intermediate|كَرَاهِيَةٌ|karaahiya|Hatred|نفرت
+Intermediate|صَدَاقَةٌ|sadaaqa|Friendship|دوستی
+Intermediate|جَارٌ|jaar|Neighbor|پڑوسی
+Intermediate|ضَيْفٌ|dayf|Guest|مہمان
+Intermediate|عَائِلَةٌ|aa'ila|Family|خاندان
+Intermediate|زَوَاجٌ|zawaaj|Marriage|شادی
+Intermediate|طِفْلٌ|tifl|Child|بچہ
+Intermediate|شَابٌّ|shaabb|Young man|نوجوان
+Intermediate|شَيْخٌ|shaykh|Elder / Scholar|بزرگ / شیخ
+Intermediate|عُمْرٌ|umr|Age / Lifetime|عمر
+Intermediate|حَيَاةٌ|hayaat|Life|زندگی
+Intermediate|مَوْتٌ|mawt|Death|موت
+Intermediate|قَدَرٌ|qadar|Destiny|تقدیر
+Intermediate|حَظٌّ|hadhdh|Luck|قسمت
+Intermediate|نَصِيبٌ|naseeb|Share / Fate|حصہ / نصیب
+Advanced|تَحْلِيلٌ|tahleel|Analysis|تجزیہ
+Advanced|نَظَرِيَّةٌ|nadhariyya|Theory|نظریہ
+Advanced|مَنْهَجٌ|manhaj|Methodology|طریقۂ کار / منہج
+Advanced|مَفْهُومٌ|mafhoom|Concept|تصور / مفہوم
+Advanced|مُصْطَلَحٌ|mustalah|Term|اصطلاح
+Advanced|دِرَاسَةٌ|diraasa|Study|مطالعہ
+Advanced|بَحْثٌ|bahth|Research|تحقیق
+Advanced|اِكْتِشَافٌ|iktishaaf|Discovery|دریافت
+Advanced|اِخْتِرَاعٌ|ikhtiraa'|Invention|ایجاد
+Advanced|تَطَوُّرٌ|tatawwur|Development / Evolution|ترقی / ارتقا
+Advanced|تَقَدُّمٌ|taqaddum|Progress|پیش رفت
+Advanced|تَغَيُّرٌ|taghayyur|Change|تبدیلی
+Advanced|اِسْتِقْرَارٌ|istiqraar|Stability|استحکام / ٹھہراؤ
+Advanced|تَوَازُنٌ|tawaazun|Balance|توازن
+Advanced|مَسْؤُولِيَّةٌ|mas'ooliyya|Responsibility|ذمہ داری
+Advanced|وَاجِبٌ|waajib|Duty|فرض
+Advanced|حَقِيقَةٌ|haqeeqa|Reality / Truth|حقیقت
+Advanced|وَاقِعٌ|waaqi'|Actual reality|واقعیت / حقیقتِ حال
+Advanced|خَيَالٌ|khayaal|Imagination|تخیل
+Advanced|إِبْدَاعٌ|ibdaa'|Creativity|ابداع / تخلیقی صلاحیت
+Advanced|مَوْهِبَةٌ|mawhiba|Talent|صلاحیت / ہنر
+Advanced|مَهَارَةٌ|mahaara|Skill|مہارت
+Advanced|خِبْرَةٌ|khibra|Acquired experience|تجربہ کاری
+Advanced|كَفَاءَةٌ|kafaa'a|Competence|قابلیت
+Advanced|جَوْدَةٌ|jawda|Quality|عمدگی / کوالٹی
+Advanced|كَمِّيَّةٌ|kammiyya|Quantity|مقدار
+Advanced|نِسْبَةٌ|nisba|Ratio / Percentage|نسبت / تناسب
+Advanced|مُتَوَسِّطٌ|mutawassit|Average / Medium|اوسط / درمیانہ
+Advanced|مِعْيَارٌ|mi'yaar|Standard / Criterion|معیار
+Advanced|قَانُونٌ|qaanoon|Law|قانون
+Advanced|دُسْتُورٌ|dustoor|Constitution|آئین
+Advanced|مَحْكَمَةٌ|mahkama|Court|عدالت
+Advanced|قَاضٍ|qaadin|Judge|قاضی / جج
+Advanced|شَهَادَةٌ|shahaada|Testimony / Certificate|گواہی / سند
+Advanced|دَلِيلٌ|daleel|Evidence / Guide|دلیل / ثبوت
+Advanced|بُرْهَانٌ|burhaan|Proof|برہان / ثبوت
+Advanced|اِتِّفَاقِيَّةٌ|ittifaaqiyya|Agreement|معاہدہ
+Advanced|مُعَاهَدَةٌ|mu'aahada|Treaty|عہد نامہ
+Advanced|مُفَاوَضَاتٌ|mufaawadaat|Negotiations|مذاکرات
+Advanced|سِيَاسَةٌ|siyaasa|Politics / Policy|سیاست / پالیسی
+Advanced|دِيمُقْرَاطِيَّةٌ|deemuqraatiyya|Democracy|جمہوریت
+Advanced|اِنْتِخَابَاتٌ|intikhaabaat|Elections|انتخابات
+Advanced|مُعَارَضَةٌ|mu'aarada|Opposition|اپوزیشن / مخالفت
+Advanced|سُلْطَةٌ|sulta|Authority / Power|اختیار / اقتدار
+Advanced|سِيَادَةٌ|siyaada|Sovereignty|خودمختاری
+Advanced|اِسْتِقْلَالٌ|istiqlaal|Independence|آزادی و استقلال
+Advanced|اِحْتِلَالٌ|ihtilaal|Occupation|قبضہ
+Advanced|مُقَاوَمَةٌ|muqaawama|Resistance|مقابلہ / مزاحمت
+Advanced|هِجْرَةٌ|hijra|Migration|ہجرت
+Advanced|لَاجِئٌ|laaji'|Refugee|پناہ گزین
+Advanced|مُهَاجِرٌ|muhaajir|Immigrant / Emigrant|مہاجر
+Advanced|تَضَامُنٌ|tadaamun|Solidarity|یکجہتی
+Advanced|تَعَاوُنٌ|ta'aawun|Cooperation|تعاون
+Advanced|مُشَارَكَةٌ|mushaaraka|Participation|شرکت
+Advanced|تَطَوُّعٌ|tatawwu'|Volunteering|رضاکارانہ خدمت
+Advanced|مُجْتَمَعٌ|mujtama'|Society|معاشرہ
+Advanced|تَقَالِيدُ|taqaaleed|Traditions|روایات / رسوم
+Advanced|عَادَةٌ|aada|Habit / Custom|عادت / رواج
+Advanced|سُلُوكٌ|suluuk|Behavior|رویہ / برتاؤ
+Advanced|أَخْلَاقٌ|akhlaaq|Ethics / Morals|اخلاق
+Advanced|فَضِيلَةٌ|fadeela|Virtue|فضیلت
+Advanced|رَذِيلَةٌ|radheela|Vice|برائی / رذالت
+Advanced|تَوَاضُعٌ|tawaadu'|Humility|عاجزی / انکساری
+Advanced|تَكَبُّرٌ|takabbur|Arrogance|تکبر / غرور
+Advanced|طُمُوحٌ|tumooh|Ambition|عزم / آرزو
+Advanced|إِرَادَةٌ|iraada|Will|ارادہ
+Advanced|عَزِيمَةٌ|azeema|Determination|پختہ عزم / ہمت
+Advanced|اِجْتِهَادٌ|ijtihaad|Diligent effort|محنت / کوشش
+Advanced|مُثَابَرَةٌ|muthaabara|Perseverance|استقامت / ثابت قدمی
+Advanced|تَحَدٍّ|tahaddin|Challenge|چیلنج
+Advanced|إِنْجَازٌ|injaaz|Achievement|کارنامہ / حصولیابی
+Advanced|تَأْثِيرٌ|ta'theer|Influence / Effect|اثر
+Advanced|عَلَاقَةٌ|alaaqa|Relationship|تعلق / رشتہ
+Advanced|اِتِّصَالٌ|ittisaal|Communication / Contact|رابطہ
+Advanced|تَوَاصُلٌ|tawaasul|Keeping in touch|میل جول
+Advanced|تَرْجَمَةٌ|tarjama|Translation|ترجمہ
+Advanced|بَلَاغَةٌ|balaagha|Eloquence|بلاغت / فصاحت
+Advanced|خِطَابٌ|khitaab|Speech / Address|خطاب
+Advanced|تَعْبِيرٌ|ta'beer|Expression|اظہار / تعبیر
+Advanced|مَعْنًى|ma'nan|Meaning|معنی
+Advanced|غُمُوضٌ|ghumood|Ambiguity|ابہام
+Advanced|وُضُوحٌ|wudooh|Clarity|وضاحت
+Advanced|دِقَّةٌ|diqqa|Precision|درستگی / باریکی
+Advanced|شُمُولِيَّةٌ|shumooliyya|Comprehensiveness|جامعیت
+Advanced|اِسْتِدَامَةٌ|istidaama|Sustainability|پائیداری
+Advanced|بِيئَةٌ|bee'a|Environment|ماحول
+Advanced|طَاقَةٌ|taaqa|Energy|توانائی
+Advanced|مَوَارِدُ|mawaarid|Resources|وسائل
+Advanced|تَلَوُّثٌ|talawwuth|Pollution|آلودگی
+Advanced|مُنَاخٌ|munaakh|Climate|آب و ہوا
+Advanced|كَارِثَةٌ|kaaritha|Disaster|آفت / تباہی
+Advanced|زِلْزَالٌ|zilzaal|Earthquake|زلزلہ
+Advanced|فَيَضَانٌ|fayadaan|Flood|سیلاب
+Advanced|جَفَافٌ|jafaaf|Drought|خشک سالی
+Expert|بَلَاغٌ|balaagh|Conveyance of a message|پیغام پہنچانا
+Expert|سَكِينَةٌ|sakeena|Tranquility|سکون / اطمینان
+Expert|طُمَأْنِينَةٌ|tuma'neena|Deep inner calm|قلبی اطمینان
+Expert|خُشُوعٌ|khushoo'|Humble devotion|خشوع / عاجزی
+Expert|تَقْوَى|taqwaa|God-consciousness|تقویٰ / پرہیزگاری
+Expert|إِخْلَاصٌ|ikhlaas|Sincerity|اخلاص
+Expert|إِحْسَانٌ|ihsaan|Excellence / Benevolence|احسان / نیکی
+Expert|زُهْدٌ|zuhd|Asceticism|زہد / دنیا سے بے رغبتی
+Expert|وَرَعٌ|wara'|Scrupulous piety|پرہیزگاری / احتیاط
+Expert|قَنَاعَةٌ|qanaa'a|Contentment|قناعت
+Expert|تَوَكُّلٌ|tawakkul|Reliance on God|توکل
+Expert|حِكْمَةٌ|hikma|Wisdom|حکمت / دانائی
+Expert|بَصِيرَةٌ|baseera|Insight|بصیرت
+Expert|فِرَاسَةٌ|firaasa|Perceptiveness|فراست / زیرکی
+Expert|فِطْنَةٌ|fitna|Sharp intelligence|ذہانت / سمجھداری
+Expert|نَزَاهَةٌ|nazaaha|Integrity|دیانت داری / پاکیزگی
+Expert|مُرُوءَةٌ|muroo'a|Chivalry|مروت
+Expert|شَهَامَةٌ|shahaama|Gallantry|شرافت / جواں مردی
+Expert|نَخْوَةٌ|nakhwa|Gallant pride|حمیت / غیرت
+Expert|كِبْرِيَاءُ|kibriyaa'|Grandeur|کبریائی / عظمت
+Expert|جَلَالٌ|jalaal|Majesty|جلال
+Expert|جَمَالٌ|jamaal|Beauty|جمال / حسن
+Expert|بَهَاءٌ|bahaa'|Splendor|رونق / شان
+Expert|رَوْنَقٌ|rawnaq|Luster|چمک دمک
+Expert|سَنًا|sanaa|Radiance|چمک / روشنی
+Expert|ضِيَاءٌ|diyaa'|Radiant light|ضیا / روشنی
+Expert|نُورٌ|noor|Light|نور
+Expert|ظَلَامٌ|dhalaam|Darkness|اندھیرا
+Expert|غَيْهَبٌ|ghayhab|Deep darkness|گھپ اندھیرا
+Expert|فَجْرٌ|fajr|Dawn|فجر / صبحِ صادق
+Expert|شَفَقٌ|shafaq|Twilight glow|شفق
+Expert|غُرُوبٌ|ghuroob|Sunset|غروب
+Expert|أُفُقٌ|ufuq|Horizon|افق
+Expert|فَلَكٌ|falak|Orbit / Celestial sphere|فلک / مدار
+Expert|كَوْنٌ|kawn|Universe|کائنات
+Expert|عَدَمٌ|adam|Non-existence|عدم
+Expert|وُجُودٌ|wujood|Existence|وجود
+Expert|جَوْهَرٌ|jawhar|Essence / Jewel|جوہر
+Expert|مَاهِيَّةٌ|maahiyya|Nature of a thing|ماہیت
+Expert|بَدِيهَةٌ|badeeha|Quick wit|برجستگی / حاضر دماغی
+Expert|اِرْتِجَالٌ|irtijaal|Improvisation|برجستہ گوئی
+Expert|فَصَاحَةٌ|fasaaha|Fluency / Eloquence|فصاحت
+Expert|بَيَانٌ|bayaan|Clear expression|بیان / وضاحت
+Expert|جِنَاسٌ|jinaas|Wordplay (paronomasia)|صنعتِ تجنیس
+Expert|طِبَاقٌ|tibaaq|Antithesis|صنعتِ تضاد / طباق
+Expert|كِنَايَةٌ|kinaaya|Allusion / Metonymy|کنایہ
+Expert|اِسْتِعَارَةٌ|isti'aara|Metaphor|استعارہ
+Expert|تَشْبِيهٌ|tashbeeh|Simile|تشبیہ
+Expert|مَجَازٌ|majaaz|Figurative sense|مجاز
+Expert|قَصِيدَةٌ|qaseeda|Ode|قصیدہ
+Expert|غَزَلٌ|ghazal|Love poetry|غزل
+Expert|رِثَاءٌ|rithaa'|Elegy|مرثیہ
+Expert|هِجَاءٌ|hijaa'|Satire / Lampoon|ہجو
+Expert|مَدِيحٌ|madeeh|Praise poetry|مدح / تعریف
+Expert|وَصْفٌ|wasf|Description|وصف / بیان
+Expert|أُسْلُوبٌ|uslub|Style|اسلوب / انداز
+Expert|بَدِيعٌ|badee'|Wonderfully original|انوکھا / بدیع
+Expert|غَرِيبٌ|ghareeb|Strange / Foreigner|اجنبی / عجیب
+Expert|نَادِرٌ|naadir|Rare|نایاب
+Expert|فَرِيدٌ|fareed|Unique|یکتا / بے مثال
+Expert|عَظِيمٌ|adheem|Great / Magnificent|عظیم
+Expert|جَلِيلٌ|jaleel|Exalted|جلیل / بزرگ
+Expert|نَبِيلٌ|nabeel|Noble|شریف / نیک سیرت
+Expert|وَقُورٌ|waqoor|Dignified|باوقار / سنجیدہ
+Expert|حَلِيمٌ|haleem|Forbearing|بردبار / حلیم
+Expert|صَبُورٌ|saboor|Very patient|بہت صبر کرنے والا
+Expert|شَكُورٌ|shakoor|Very grateful|بہت شکر گزار
+Expert|غَفُورٌ|ghafoor|Oft-forgiving|بہت بخشنے والا
+Expert|وَدُودٌ|wadood|Loving|بہت محبت کرنے والا
+Expert|رَءُوفٌ|ra'oof|Compassionate|نہایت شفیق
+Expert|لَطِيفٌ|lateef|Subtle / Gentle|لطیف / مہربان
+Expert|خَبِيرٌ|khabeer|All-aware / Expert|باخبر / ماہر
+Expert|حَكِيمٌ|hakeem|Wise|دانا / حکیم
+Expert|عَلِيمٌ|aleem|All-knowing|جاننے والا / علیم
+Expert|بَصِيرٌ|baseer|All-seeing|دیکھنے والا / بصیر
+Expert|سَمِيعٌ|samee'|All-hearing|سننے والا / سمیع
+Expert|كَرِيمٌ|kareem|Generous|سخی / کریم
+Expert|عَزِيزٌ|azeez|Dear / Mighty|عزیز / غالب
+Expert|قَوِيٌّ|qawiyy|Strong|طاقتور / قوی
+Expert|مَتِينٌ|mateen|Firm / Solid|مضبوط / متین
+Expert|نَاصِحٌ|naasih|Sincere advisor|خیر خواہ / نصیحت کرنے والا
+Expert|مُرْشِدٌ|murshid|Guide / Mentor|رہنما / مرشد
+Expert|هِدَايَةٌ|hidaaya|Guidance|ہدایت
+Expert|ضَلَالٌ|dalaal|Misguidance|گمراہی
+Expert|غَفْلَةٌ|ghafla|Heedlessness|غفلت
+Expert|يَقَظَةٌ|yaqadha|Alertness|بیداری / ہوشیاری
+Expert|يَقِينٌ|yaqeen|Certainty|یقین
+Expert|شَكٌّ|shakk|Doubt|شک
+Expert|ظَنٌّ|dhann|Conjecture|گمان
+Expert|وَهْمٌ|wahm|Illusion|وہم
+Expert|سَرَابٌ|saraab|Mirage|سراب
+Expert|اِبْتِلَاءٌ|ibtilaa'|Trial / Test|آزمائش
+Expert|عِبْرَةٌ|ibra|Lesson / Moral|عبرت / سبق
+Expert|مَوْعِظَةٌ|maw'idha|Admonition|نصیحت / وعظ
+Expert|حُجَّةٌ|hujja|Argument / Proof|دلیل / حجت
+Expert|مِيزَانٌ|meezaan|Scale / Balance|ترازو / میزان
+Expert|صِرَاطٌ|siraat|Path|صراط / راستہ
+Expert|سَبِيلٌ|sabeel|Way / Path|راہ
+Expert|مَنَارَةٌ|manaara|Lighthouse / Minaret|مینار / روشنی کا مینار
+Expert|مَلَكُوتٌ|malakoot|Realm / Dominion|ملکوت / عالمِ بالا
+Expert|لَهْفَةٌ|lahfa|Eager longing|بے قراری / شدید اشتیاق
+Expert|حَنِينٌ|haneen|Nostalgic yearning|پرانی یادوں کی تڑپ
+Expert|غُرْبَةٌ|ghurba|Life away from home|پردیس / اجنبیت
+Expert|وِجْدَانٌ|wijdaan|Inner feeling|وجدان / باطنی احساس
+Expert|خَاطِرَةٌ|khaatira|Passing thought|خیال / سوچ
+Expert|هَمْسَةٌ|hamsa|Whisper|سرگوشی
+Expert|نَسِيمٌ|naseem|Gentle breeze|نسیم / ٹھنڈی ہوا
+Expert|أَرِيجٌ|areej|Sweet fragrance|خوشبو / مہک
+Expert|عَبَقٌ|abaq|Lingering fragrance|دیر تک رہنے والی خوشبو
+Expert|بَسْمَةٌ|basma|Smile|مسکراہٹ
+Expert|رَوْعَةٌ|raw'a|Magnificence|شان / عمدگی

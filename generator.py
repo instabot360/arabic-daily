@@ -1,57 +1,59 @@
-import json, re
-import anthropic
-from config import MODEL, LEVEL_HINTS
+"""No-AI word source: reads words.txt (Level|Arabic|Transliteration|English|Urdu)."""
+import os
 
-PROMPT = """You are an expert Arabic vocabulary teacher creating one Instagram post for Urdu/English speakers.
+HERE = os.path.dirname(os.path.abspath(__file__))
 
-Level: {level} -> {hint}
-Do NOT repeat any of these already-posted words: {used}
+HOOKS = {
+    "Beginner": ["Can you guess this Arabic word? 🤔", "Do you already know this word? 👀",
+                 "A word you'll use all the time ✨", "Quick challenge: what does this mean? 🧠"],
+    "Elementary": ["Level up your Arabic today 📈", "You may have heard this one before 👂",
+                   "Can you guess it before swiping? 🤔", "Everyday Arabic, one word at a time ✨"],
+    "Intermediate": ["Do you know this word? Be honest 😅", "A word that makes you sound fluent 💬",
+                     "Test your Arabic: what does this mean? 🧠", "Time to stretch your vocabulary 💪"],
+    "Advanced": ["Only strong learners know this one 🔥", "Think you know it? Swipe to check 🧐",
+                 "An advanced word for serious learners 📚", "Can you get this without help? 💪"],
+    "Expert": ["Rare and beautiful Arabic ✨", "Real Arabic mastery: do you know this one? 🏆",
+               "A word from classical Arabic 📜", "Very few learners know this word 👑"],
+}
+TAGS = ["arabicwords", "arabicvocabulary", "arabiclanguage", "learnurdu", "urdu", "wordoftheday",
+        "arabicforbeginners", "arabiclearning", "languagelearning", "arabicquotes", "urduvocabulary", "dailyarabic"]
 
-Pick ONE Arabic word (a single word, not a phrase). Only the meaning matters, no grammar.
-Return ONLY valid JSON, no markdown, with exactly these keys:
-{{
-  "arabic": "word with full tashkeel/harakat",
-  "transliteration": "simple Latin pronunciation e.g. kitaab",
-  "english": "concise meaning, 1-4 words",
-  "urdu": "concise meaning in Urdu script, 1-4 words, natural and correct",
-  "hook": "one short, curious, engaging caption first line (a question or challenge), with 1 emoji",
-  "hashtags": ["5 relevant hashtags without the # sign, mix of niche and broad"]
-}}
-Accuracy of the meanings is critical."""
-
-def generate_word(level: str, used: list[str], retries: int = 3) -> dict:
-    client = anthropic.Anthropic()
-    plain = lambda s: re.sub(r"[\u064B-\u065F\u0670]", "", s).strip()
-    used_plain = {plain(u) for u in used}
-    for _ in range(retries):
-        msg = client.messages.create(
-            model=MODEL, max_tokens=600,
-            messages=[{"role": "user", "content": PROMPT.format(
-                level=level, hint=LEVEL_HINTS[level], used=", ".join(used[-400:]) or "none")}],
-        )
-        text = "".join(b.text for b in msg.content if b.type == "text")
-        text = re.sub(r"^```(?:json)?|```$", "", text.strip(), flags=re.M).strip()
-        try:
-            data = json.loads(text)
-            assert all(data.get(k) for k in ("arabic", "transliteration", "english", "urdu", "hook", "hashtags"))
-        except Exception:
+def load_words(path=None):
+    path = path or os.path.join(HERE, "words.txt")
+    words = []
+    for line in open(path, encoding="utf-8"):
+        line = line.strip()
+        if not line or line.startswith("#"):
             continue
-        if plain(data["arabic"]) in used_plain:
-            continue
-        return data
-    raise RuntimeError("Could not generate a valid unique word")
+        p = [x.strip() for x in line.split("|")]
+        if len(p) != 5:
+            raise ValueError(f"words.txt line has {len(p)} parts, expected 5: {line}")
+        words.append(dict(level=p[0], arabic=p[1], transliteration=p[2], english=p[3], urdu=p[4]))
+    return words
 
-def build_caption(w: dict, level: str, handle: str) -> str:
-    tags = " ".join("#" + t.lstrip("#").replace(" ", "") for t in w["hashtags"][:5])
+def word_for_day(day: int) -> dict:
+    words = load_words()
+    if day > len(words):
+        raise SystemExit(f"OUT OF WORDS: day {day} but words.txt only has {len(words)} words. "
+                         f"Add more lines to the bottom of words.txt.")
+    return words[day - 1]
+
+def hook_for(level, day):
+    hooks = HOOKS.get(level, HOOKS["Beginner"])
+    return hooks[day % len(hooks)]
+
+def build_caption(w, day, handle):
+    tags = ["learnarabic", "arabic"] + [TAGS[(day * 3 + i) % len(TAGS)] for i in range(4)]
+    tags = " ".join("#" + t for t in dict.fromkeys(tags))
     return (
-        f"{w['hook']}\n\n"
+        f"{hook_for(w['level'], day)}\n\n"
         f"📖 {w['arabic']} ({w['transliteration']})\n"
         f"🇬🇧 {w['english']}\n"
         f"🇵🇰 {w['urdu']}\n"
-        f"📊 Level: {level}\n\n"
+        f"📊 Level: {w['level']}\n\n"
         f"💾 Save this so you never forget it\n"
         f"📩 Send to a friend learning Arabic\n"
         f"💬 Did you already know it? Tell me below!\n"
         f"➕ Follow {handle} for a new Arabic word every day\n\n"
-        f"{tags} #arabic #learnarabic #urdu"
+        f"{tags}"
     )
