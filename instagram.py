@@ -32,3 +32,12 @@ def post_carousel(image_urls, caption, user_id, token):
     _wait(parent, token)
     return _check(requests.post(f"{API}/{user_id}/media_publish", data={
         "creation_id": parent, "access_token": token}, timeout=60))["id"]
+
+
+def post_reel(video_url, caption, user_id, token):
+    container = _check(requests.post(f"{API}/{user_id}/media", data={
+        "media_type": "REELS", "video_url": video_url, "caption": caption,
+        "share_to_feed": "true", "access_token": token}, timeout=60))["id"]
+    _wait(container, token, tries=72)  # videos can take up to ~6 minutes
+    return _check(requests.post(f"{API}/{user_id}/media_publish", data={
+        "creation_id": container, "access_token": token}, timeout=60))["id"]
