@@ -1,20 +1,19 @@
 {
   "date": "2026-10-03",
-  "day": 1,
+  "day": 2,
   "level": "Beginner",
   "word": {
     "level": "Beginner",
-    "arabic": "مَاءٌ",
-    "transliteration": "maa'",
-    "english": "Water",
-    "urdu": "پانی"
+    "arabic": "كِتَابٌ",
+    "transliteration": "kitaab",
+    "english": "Book",
+    "urdu": "کتاب"
   },
-  "caption": "Do you already know this word? 👀\n\n📖 مَاءٌ (maa')\n🇬🇧 Water\n🇵🇰 پانی\n📊 Level: Beginner\n\n💾 Save this so you never forget it\n📩 Send to a friend learning Arabic\n💬 Did you already know it? Tell me below!\n➕ Follow @akramgujjar296 for a new Arabic word every day\n\n#learnarabic #arabic #learnurdu #urdu #wordoftheday #arabicforbeginners",
+  "caption": "A word you'll use all the time ✨\n\n📖 كِتَابٌ (kitaab)\n🇬🇧 Book\n🇵🇰 کتاب\n📊 Level: Beginner\n\n💾 Save this so you never forget it\n📩 Send to a friend learning Arabic\n💬 Did you already know it? Tell me below!\n➕ Follow @arabicword.daily for a new Arabic word every day\n\n#learnarabic #arabic #arabicforbeginners #arabiclearning #languagelearning #arabicquotes",
   "images": [
     "posts/2026-10-03/slide_1.jpg",
     "posts/2026-10-03/slide_2.jpg",
     "posts/2026-10-03/slide_3.jpg"
   ],
-  "posted": true,
-  "media_id": "17874509412585416"
+  "posted": false
 }
