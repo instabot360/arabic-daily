@@ -1,0 +1,33 @@
+name: daily-arabic-word
+on:
+  schedule:
+    - cron: "0 15 * * *"   # 15:00 UTC = 8:00 PM Pakistan time. Change to taste.
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: daily-post
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    env:
+      IG_HANDLE: ${{ vars.IG_HANDLE }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt
+      - name: Pick word and render slides
+        run: python main.py prepare
+        env: { ANTHROPIC_API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}" }
+      - name: Push images so Instagram can fetch them
+        run: |
+          git config user.name "arabic-bot"; git config user.email "bot@users.noreply.github.com"
+          git add posts state.json && git commit -m "prepare post" && git push
+      - name: Publish to Instagram
+        run: python main.py publish
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      - name: Save posted status
+        run: |
+          git add posts && (git diff --cached --quiet || git commit -m "mark posted" && git push)
