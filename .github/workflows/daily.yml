@@ -1,7 +1,7 @@
 name: daily-arabic-word
 on:
   schedule:
-    - cron: "0 15 * * *"   # 15:00 UTC = 8:00 PM Pakistan time. Change to taste.
+    - cron: "0 15 * * *"   # 15:00 UTC = 8:00 PM Pakistan time
   workflow_dispatch:
 permissions:
   contents: write
@@ -18,7 +18,6 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Pick word and render slides
         run: python main.py prepare
-        env: { ANTHROPIC_API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}" }
       - name: Push images so Instagram can fetch them
         run: |
           git config user.name "arabic-bot"; git config user.email "bot@users.noreply.github.com"
