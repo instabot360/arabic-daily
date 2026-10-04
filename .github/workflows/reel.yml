@@ -1,7 +1,7 @@
 name: reel-arabic-word
 on:
   schedule:
-    - cron: "0 7 * * 1,3,5"   # 07:00 UTC = 12:00 PM Pakistan time, Mon/Wed/Fri
+    - cron: "13 9 * * 2,3,4"   # 07:00 UTC = 12:00 PM Pakistan time, Mon/Wed/Fri
   workflow_dispatch:
 permissions:
   contents: write
