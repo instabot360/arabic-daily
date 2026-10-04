@@ -1,9 +1,9 @@
 """Render a 9.5s vertical Reel (1080x1920) for one word using Pillow + ffmpeg."""
-import subprocess
+import asyncio, os, re, subprocess, tempfile
 from PIL import Image, ImageDraw
 import render as R
 
-W, H, FPS, DUR = 1080, 1920, 24, 9.5
+W, H, FPS, DUR = 1080, 1920, 24, 11.0
 
 def _bg():
     img = Image.new("RGB", (W, H), R.BG1)
@@ -27,32 +27,98 @@ def _plain(xy, text, kind, size, fill):
     return lambda d: d.text(xy, text, font=R.font(kind, size), fill=fill, anchor="mm")
 
 def build_elements(w, level, day, handle):
-    """(layer, start, end_or_None) ; fades in over 0.5s, fades out over 0.4s at end."""
+    """(layer, start, end_or_None, fade_in, fade_out)."""
     E = []
-    add = lambda fn, s, e=None: E.append((_layer(fn), s, e))
+    def add(fn, s, e=None, fi=0.5, fo=0.4):
+        E.append((_layer(fn), s, e, fi, fo))
     add(_plain((W // 2, 330), "WORD OF THE DAY", "bold", 44, R.GOLD), 0.0)
     add(_plain((W // 2, 395), f"Day {day}  •  {level}", "reg", 32, R.MUTED), 0.2)
     add(_text((W // 2, 640), w["arabic"], "arabic", 300, R.CREAM, 880, True), 0.5)
     add(_plain((W // 2, 880), w["transliteration"], "reg", 56, R.GOLD), 1.3)
-    add(_plain((W // 2, 1200), "What does it mean?", "bold", 54, R.CREAM), 2.6, 5.4)
-    for i, (n, t) in enumerate(((3, 3.4), (2, 4.1), (1, 4.8))):
-        add(_plain((W // 2, 1330), str(n), "bold", 150, R.GOLD), t, t + 0.7)
-    add(_plain((W // 2, 1010), "ENGLISH", "bold", 30, R.GOLD), 5.6)
-    add(_text((W // 2, 1120), w["english"], "bold", 100, R.CREAM, 900), 5.6)
-    add(_plain((W // 2, 1260), "URDU", "bold", 30, R.GOLD), 6.6)
-    add(_text((W // 2, 1370), w["urdu"], "arabic", 120, R.CREAM, 900, True), 6.6)
-    add(_plain((W // 2, 1480), f"Follow {handle} for a new word daily", "reg", 34, R.MUTED), 7.8)
+    add(_plain((W // 2, 1200), "What does it mean?", "bold", 54, R.CREAM), 2.6, 6.6)
+    for n, t in ((3, 3.6), (2, 4.6), (1, 5.6)):   # one full second per number
+        add(_plain((W // 2, 1340), str(n), "bold", 150, R.GOLD), t, t + 1.0, 0.2, 0.2)
+    add(_plain((W // 2, 1010), "ENGLISH", "bold", 30, R.GOLD), 6.8)
+    add(_text((W // 2, 1120), w["english"], "bold", 100, R.CREAM, 900), 6.8)
+    add(_plain((W // 2, 1260), "URDU", "bold", 30, R.GOLD), 8.0)
+    add(_text((W // 2, 1370), w["urdu"], "arabic", 120, R.CREAM, 900, True), 8.0)
+    add(_plain((W // 2, 1480), f"Follow {handle} for a new word daily", "reg", 34, R.MUTED), 9.2)
     return E
 
-def alpha_at(t, s, e):
+def alpha_at(t, s, e, fi=0.5, fo=0.4):
     if t < s:
         return 0.0
-    a = min(1.0, (t - s) / 0.5)
-    if e is not None and t > e - 0.4:
-        a = min(a, max(0.0, (e - t) / 0.4))
+    a = min(1.0, (t - s) / fi)
+    if e is not None and t > e - fo:
+        a = min(a, max(0.0, (e - t) / fo))
     return a
 
+def render_cover(w, level, day, handle, path):
+    """Reel cover (9:16). Content sits in the centre so the 3:4 profile-grid crop still shows it."""
+    img = _bg()
+    d = ImageDraw.Draw(img)
+    d.text((W // 2, 520), "WORD OF THE DAY", font=R.font("bold", 48), fill=R.GOLD, anchor="mm")
+    R.draw_fit(d, (W // 2, 860), w["arabic"], "arabic", 340, R.CREAM, 880, True)
+    d.text((W // 2, 1120), w["transliteration"], font=R.font("reg", 60), fill=R.GOLD, anchor="mm")
+    d.text((W // 2, 1300), "Do you know it?", font=R.font("bold", 56), fill=R.CREAM, anchor="mm")
+    d.text((W // 2, 1400), handle, font=R.font("reg", 36), fill=R.MUTED, anchor="mm")
+    img.save(path, "JPEG", quality=94)
+
+# ---------- voice (free, via edge-tts; falls back to a silent Reel on any error) ----------
+VOICES = {"ar": os.getenv("VOICE_AR", "ar-SA-HamedNeural"),
+          "en": os.getenv("VOICE_EN", "en-US-GuyNeural"),
+          "ur": os.getenv("VOICE_UR", "ur-PK-AsadNeural")}
+
+def _speakable(text):
+    text = re.sub(r"\(.*?\)", "", text)          # drop things like "(Zakat)"
+    return re.sub(r"\s*/\s*", ", ", text).strip()  # "Peace / Hello" -> "Peace, Hello"
+
+async def _tts(text, voice, rate, path):
+    import edge_tts
+    await edge_tts.Communicate(text, voice, rate=rate).save(path)
+
+def make_voice_clips(w, tmp):
+    """Returns [(mp3_path, delay_ms)] matching the on-screen timeline, or [] if voice is unavailable."""
+    if os.getenv("REEL_VOICE", "1") == "0":
+        return []
+    plan = [("ar", w["arabic"], "-15%", 1000), ("en", _speakable(w["english"]), "+0%", 6900),
+            ("ur", _speakable(w["urdu"]), "+0%", 8100), ("ar", w["arabic"], "-15%", 9700)]
+    clips = []
+    try:
+        for i, (lang, text, rate, delay) in enumerate(plan):
+            path = os.path.join(tmp, f"v{i}.mp3")
+            asyncio.run(_tts(text, VOICES[lang], rate, path))
+            clips.append((path, delay))
+        return clips
+    except Exception as e:
+        print(f"WARNING: voice generation failed ({e}); posting a silent Reel.")
+        return []
+
+def mux_audio(video, clips, out_path):
+    cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", video]
+    for path, _ in clips:
+        cmd += ["-i", path]
+    parts = [f"[{i+1}:a]aresample=44100,adelay={d}|{d}[a{i}]" for i, (_, d) in enumerate(clips)]
+    mix = "".join(f"[a{i}]" for i in range(len(clips)))
+    graph = ";".join(parts) + f";{mix}amix=inputs={len(clips)}:normalize=0,apad[aout]"
+    cmd += ["-filter_complex", graph, "-map", "0:v", "-map", "[aout]", "-t", str(DUR),
+            "-c:v", "copy", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", out_path]
+    subprocess.run(cmd, check=True)
+
 def render_reel(w, level, day, handle, out_path):
+    with tempfile.TemporaryDirectory() as tmp:
+        silent = os.path.join(tmp, "silent.mp4")
+        _render_silent(w, level, day, handle, silent)
+        clips = make_voice_clips(w, tmp)
+        if clips:
+            try:
+                mux_audio(silent, clips, out_path)
+                return
+            except Exception as e:
+                print(f"WARNING: audio mixing failed ({e}); posting a silent Reel.")
+        os.replace(silent, out_path) if os.path.exists(silent) else None
+
+def _render_silent(w, level, day, handle, out_path):
     bg = _bg()
     elements = build_elements(w, level, day, handle)
     cmd = ["ffmpeg", "-y", "-loglevel", "error",
@@ -65,8 +131,8 @@ def render_reel(w, level, day, handle, out_path):
     for f in range(int(DUR * FPS)):
         t = f / FPS
         frame = bg.copy()
-        for layer, s, e in elements:
-            a = alpha_at(t, s, e)
+        for layer, s, e, fi, fo in elements:
+            a = alpha_at(t, s, e, fi, fo)
             if a <= 0:
                 continue
             dy = int(30 * (1 - a))
