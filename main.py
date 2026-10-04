@@ -93,8 +93,9 @@ def reel_prepare():
     w = word_for_day(day)  # re-use the latest carousel word (no extra words consumed)
     os.makedirs(out, exist_ok=True)
     reel.render_reel(w, w["level"], day, HANDLE, os.path.join(out, "reel.mp4"))
+    reel.render_cover(w, w["level"], day, HANDLE, os.path.join(out, "cover.jpg"))
     json.dump({"date": date, "day": day, "word": w, "caption": build_caption(w, day, HANDLE),
-               "video": f"{out}/reel.mp4", "posted": False},
+               "video": f"{out}/reel.mp4", "cover": f"{out}/cover.jpg", "posted": False},
               open(meta, "w"), ensure_ascii=False, indent=2)
     print(f"Reel prepared for day {day}: {w['arabic']} = {w['english']}")
 
@@ -114,9 +115,10 @@ def reel_publish(dry=False):
         if dry:
             return
         url = raw_url(r["video"])
-        wait_public([url])
+        cover = raw_url(r["cover"]) if r.get("cover") else None
+        wait_public([u for u in (url, cover) if u])
         r["media_id"] = instagram.post_reel(url, r["caption"],
-                                            os.environ["IG_USER_ID"], os.environ["IG_ACCESS_TOKEN"])
+                                            os.environ["IG_USER_ID"], os.environ["IG_ACCESS_TOKEN"], cover)
         r["posted"] = True
         json.dump(r, open(p, "w"), ensure_ascii=False, indent=2)
         print("Reel published, media id:", r["media_id"])
