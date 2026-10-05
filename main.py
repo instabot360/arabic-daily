@@ -26,11 +26,17 @@ def raw_url(rel_path):
 def prepare(demo=False):
     from generator import word_for_day, build_caption
     state = load_state()
+    date = datetime.date.today().isoformat()
+    out = os.path.join("posts", date)
+    meta = os.path.join(out, "post.json")
+    if not demo and os.path.exists(meta):
+        done = json.load(open(meta)).get("posted")
+        print("Today's carousel is already posted, skipping." if done else
+              "Today's post is already prepared and waiting to be published, reusing it.")
+        return
     day = 1 if demo else state["day"] + 1
     w = word_for_day(day)
     level = w["level"]
-    date = datetime.date.today().isoformat()
-    out = os.path.join("posts", date)
     render.render_post(w, level, day, HANDLE, out)
     post = {"date": date, "day": day, "level": level, "word": w,
             "caption": build_caption(w, day, HANDLE),
